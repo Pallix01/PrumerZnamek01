@@ -13,6 +13,7 @@ import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class Main extends Application {
 
@@ -198,6 +199,7 @@ public class Main extends Application {
         vypocti.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
+
                 double zadani_znamky01 = Double.parseDouble(zadani_znamky1.getText());
                 double zadani_znamky02 = Double.parseDouble(zadani_znamky2.getText());
                 double zadani_znamky03 = Double.parseDouble(zadani_znamky3.getText());
@@ -261,27 +263,47 @@ public class Main extends Application {
                 }
 
                 double soucet_vah = zadani_vahy01 + zadani_vahy02
-                                  + zadani_vahy03 + zadani_vahy04
-                                  + zadani_vahy05 + zadani_vahy06
-                                  + zadani_vahy07 + zadani_vahy08
-                                  + zadani_vahy09 + zadani_vahy010;
+                        + zadani_vahy03 + zadani_vahy04
+                        + zadani_vahy05 + zadani_vahy06
+                        + zadani_vahy07 + zadani_vahy08
+                        + zadani_vahy09 + zadani_vahy010;
                 double vysledek = ((zadani_znamky01 * zadani_vahy01)
-                                 + (zadani_znamky02 * zadani_vahy02)
-                                 + (zadani_znamky03 * zadani_vahy03)
-                                 + (zadani_znamky04 * zadani_vahy04)
-                                 + (zadani_znamky05 * zadani_vahy05)
-                                 + (zadani_znamky06 * zadani_vahy06)
-                                 + (zadani_znamky07 * zadani_vahy07)
-                                 + (zadani_znamky08 * zadani_vahy08)
-                                 + (zadani_znamky09 * zadani_vahy09)
-                                 + (zadani_znamky010 * zadani_vahy010))
-                / soucet_vah;
+                        + (zadani_znamky02 * zadani_vahy02)
+                        + (zadani_znamky03 * zadani_vahy03)
+                        + (zadani_znamky04 * zadani_vahy04)
+                        + (zadani_znamky05 * zadani_vahy05)
+                        + (zadani_znamky06 * zadani_vahy06)
+                        + (zadani_znamky07 * zadani_vahy07)
+                        + (zadani_znamky08 * zadani_vahy08)
+                        + (zadani_znamky09 * zadani_vahy09)
+                        + (zadani_znamky010 * zadani_vahy010))
+                        / soucet_vah;
 
-                if (zadani_znamky01 <= 5 && zadani_znamky01 >= 1){
-                    String vysledek_text = String.valueOf(vysledek);
-                    System.out.println(vysledek_text);
+                String vysledek_text = String.valueOf(vysledek);
+
+                if (zadani_znamky01 <= 5 && zadani_znamky01 >=0 && zadani_znamky02 <= 5 && zadani_znamky02 >= 0
+                    && zadani_znamky03 <= 5 && zadani_znamky03 >= 0 && zadani_znamky04 <= 5 && zadani_znamky04 >= 0
+                    && zadani_znamky05 <= 5 && zadani_znamky05 >= 0 && zadani_znamky06 <= 5 && zadani_znamky06 >= 0
+                    && zadani_znamky07 <= 5 && zadani_znamky07 >= 0 && zadani_znamky08 <= 5 && zadani_znamky08 >= 0
+                    && zadani_znamky09 <= 5 && zadani_znamky09 >= 0 && zadani_znamky010 <= 5 && zadani_znamky010 >= 0){
+
+                    TextField vystup = new TextField(vysledek_text);
+                    GridPane.setConstraints(vystup, 2, 12);
+                    vystup.setMaxSize(57, 30);
+                    GridPane.setColumnSpan(vystup, 2);
+                    grid.getChildren().add(vystup);
                 }
-                if (zadani_znamky01 > 5 || zadani_znamky01 < 0) System.out.println("Zadána neplatná známka");
+
+                if (zadani_znamky01 > 5 || zadani_znamky01 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky01);
+                if (zadani_znamky02 > 5 || zadani_znamky02 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky02);
+                if (zadani_znamky03 > 5 || zadani_znamky03 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky03);
+                if (zadani_znamky04 > 5 || zadani_znamky04 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky04);
+                if (zadani_znamky05 > 5 || zadani_znamky05 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky05);
+                if (zadani_znamky06 > 5 || zadani_znamky06 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky06);
+                if (zadani_znamky07 > 5 || zadani_znamky07 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky07);
+                if (zadani_znamky08 > 5 || zadani_znamky08 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky08);
+                if (zadani_znamky09 > 5 || zadani_znamky09 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky09);
+                if (zadani_znamky010 > 5 || zadani_znamky010 < 0) System.out.println("Zadána neplatná známka: " + zadani_znamky010);
             }
         });
 
