@@ -201,15 +201,64 @@ public class Main extends Application {
             public void handle(ActionEvent event) {
 
                 double zadani_znamky01 = Double.parseDouble(zadani_znamky1.getText());
+
+                if (zadani_znamky01 == 0){
+                    zadani_vahy1.setText("0");
+                }
+
                 double zadani_znamky02 = Double.parseDouble(zadani_znamky2.getText());
+
+                if (zadani_znamky02 == 0){
+                    zadani_vahy2.setText("0");
+                }
+
                 double zadani_znamky03 = Double.parseDouble(zadani_znamky3.getText());
+
+                if (zadani_znamky03 == 0){
+                    zadani_vahy3.setText("0");
+                }
+
                 double zadani_znamky04 = Double.parseDouble(zadani_znamky4.getText());
+
+                if (zadani_znamky04 == 0){
+                    zadani_vahy4.setText("0");
+                }
+
                 double zadani_znamky05 = Double.parseDouble(zadani_znamky5.getText());
+
+                if (zadani_znamky05 == 0){
+                    zadani_vahy5.setText("0");
+                }
+
                 double zadani_znamky06 = Double.parseDouble(zadani_znamky6.getText());
+
+                if (zadani_znamky06 == 0){
+                    zadani_vahy6.setText("0");
+                }
+
                 double zadani_znamky07 = Double.parseDouble(zadani_znamky7.getText());
+
+                if (zadani_znamky07 == 0){
+                    zadani_vahy7.setText("0");
+                }
+
                 double zadani_znamky08 = Double.parseDouble(zadani_znamky8.getText());
+
+                if (zadani_znamky08 == 0){
+                    zadani_vahy8.setText("0");
+                }
+
                 double zadani_znamky09 = Double.parseDouble(zadani_znamky9.getText());
+
+                if (zadani_znamky09 == 0){
+                    zadani_vahy9.setText("0");
+                }
+
                 double zadani_znamky010 = Double.parseDouble(zadani_znamky10.getText());
+
+                if (zadani_znamky010 == 0){
+                    zadani_vahy10.setText("0");
+                }
 
                 double zadani_vahy01 = Double.parseDouble(zadani_vahy1.getText());
                 double zadani_vahy02 = Double.parseDouble(zadani_vahy2.getText());
@@ -222,45 +271,23 @@ public class Main extends Application {
                 double zadani_vahy09 = Double.parseDouble(zadani_vahy9.getText());
                 double zadani_vahy010 = Double.parseDouble(zadani_vahy10.getText());
 
-                if (zadani_znamky01 == 0){
-                    zadani_vahy1.setText("0");
-                }
 
-                if (zadani_znamky02 == 0){
-                    zadani_vahy2.setText("0");
-                }
 
-                if (zadani_znamky03 == 0){
-                    zadani_vahy3.setText("0");
-                }
 
-                if (zadani_znamky04 == 0){
-                    zadani_vahy4.setText("0");
-                }
 
-                if (zadani_znamky05 == 0){
-                    zadani_vahy5.setText("0");
-                }
 
-                if (zadani_znamky06 == 0){
-                    zadani_vahy6.setText("0");
-                }
 
-                if (zadani_znamky07 == 0){
-                    zadani_vahy7.setText("0");
-                }
 
-                if (zadani_znamky08 == 0){
-                    zadani_vahy8.setText("0");
-                }
 
-                if (zadani_znamky09 == 0){
-                    zadani_vahy9.setText("0");
-                }
 
-                if (zadani_znamky010 == 0){
-                    zadani_vahy10.setText("0");
-                }
+
+
+
+
+
+
+
+
 
                 double soucet_vah = zadani_vahy01 + zadani_vahy02
                         + zadani_vahy03 + zadani_vahy04
